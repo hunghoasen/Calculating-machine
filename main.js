@@ -1,54 +1,50 @@
 
+function calculation() {
 
-function myfunction() {
+    var input = document.querySelectorAll('button')
 
-    const a = parseFloat(document.getElementById('a').value)
-    const b = parseFloat(document.getElementById('b').value)
+    for (var i = 0; i < input.length; ++i) {
 
-
-    document.getElementById('result').innerHTML = sum;
-
+        input[i].onclick = function (e) {
+            //var calculation = e.target.innerHTML; //get value of calculating
+            console.log([e.target.innerHTML]);
+            //document.getElementById('result').innerHTML = calculation // get value to <p></p>
+            //document.getElementById('valueInput').value = calculation //get value to <input>
+        }
+    }
+    return input;
 }
 
+console.log(calculation);
 
-function sum() {
 
-    const a = parseFloat(document.getElementById('a').value)
-    const b = parseFloat(document.getElementById('b').value)
+function myFunction() {
 
-    const Result = a + b;
+    var a = document.getElementById('valueInput').value;
+    
+    // var myArray = []
+    // myArray.push(a);
 
-    document.getElementById('result').innerHTML = Result;
+    // console.log(Array.from([a], x => x));
+    // var newValue = Array.from([a], x => x)
+
+    //console.log(Array.from(a));
+
+    var newValue = Array.of(a)
+
+    // console.log(newValue);
+
+    var dau = calculation()
+
+    switch (dau) {
+        case "+":
+            newValue = newValue + newValue
+            console.log(document.getElementById('result').innerHTML = newValue);
+            break;
+    
+        default:
+            break;
+    }
+
+
 }
-
-function multiply() {
-    const a = parseFloat(document.getElementById('a').value)
-    const b = parseFloat(document.getElementById('b').value)
-
-    const Result = a * b;
-
-    document.getElementById('result').innerHTML = Result;
-}
-
-function division() {
-    const a = parseFloat(document.getElementById('a').value)
-    const b = parseFloat(document.getElementById('b').value)
-
-    const Result = a / b;
-
-    document.getElementById('result').innerHTML = Result;
-}
-
-function munius() {
-    const a = parseFloat(document.getElementById('a').value)
-    const b = parseFloat(document.getElementById('b').value)
-
-    const Result = a - b;
-
-    document.getElementById('result').innerHTML = Result;
-}
-
-
-
-console.log(document.getElementById('sum'));
-

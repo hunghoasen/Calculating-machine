@@ -15,17 +15,16 @@
         <h1>JS</h1>
     </div>
 
-
     <div class="box">
-        <label for="">Input A</label>
-        <input type="text" id="a" placeholder="input a"><br><br>
-        <label for="">Input B</label>
-        <input type="text" id="b" placeholder="ipnut b"><br><br>
-        <button type="button" id="sum" onclick="sum()">+</button>
-        <button type="button" id="multiply" onclick="multiply()">×</button>
-        <button type="button" id="division" onclick="division()">÷</button>
-        <button type="button" id="munius" onclick="munius()">–</button><br><br>
-        <button type="button" onclick="myfunction();">check</button>
+        <label for="">Input</label>
+        <input type="text" id="valueInput" placeholder=""><br><br>
+        <label for="">Chose</label>
+        <button type="button" id="sum" onclick="calculation()">+</button>
+        <button type="button" id="multiply" onclick="calculation()">×</button>
+        <button type="button" id="division" onclick="calculation()">÷</button>
+        <button type="button" id="munius" onclick="calculation()">–</button><br><br>
+        <!-- <button type="button" >Check</button> -->
+        <input type="submit" onclick="myFunction()" >
         
         <p id="result" style="font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;">Result</p>
     </div>
